@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "porrada"
+    }
+  },
+  "defaultProject": "porrada",
+  "cli": {
+    "analytics": false
+  }
 }
