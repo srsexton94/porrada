@@ -1,0 +1,14 @@
+.intro {
+  position: absolute;
+  text-align: center;
+  width: 40vw;
+  bottom: 1em;
+  left: 30vw;
+}
+
+@media screen and (max-width : 800px) {
+  .intro {
+    width: 70vw;
+    left: 15vw;
+  }
+}
