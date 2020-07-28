@@ -55,4 +55,13 @@ export class TimerComponent implements OnInit {
       this.btnStatus = 'Pause'
     }
   }
+
+  resetTimer() {
+    clearInterval(this.runTick)
+    this.minutes = '05';
+    this.seconds = '00';
+    this.hundredths = '00'
+    this.btnStatus = 'Start';
+    this.running = false;
+  }
 }
