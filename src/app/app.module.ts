@@ -1,7 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
+// MODULES
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common'; // for directives
 import { AppRoutingModule } from './app-routing.module';
+
+// COMPONENTS
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TrainingComponent } from './training/training.component';
@@ -18,9 +21,11 @@ import { MenuComponent } from './menu/menu.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
