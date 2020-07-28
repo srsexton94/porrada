@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { prepareEventListenerParameters } from '@angular/compiler/src/render3/view/template';
 
 @Component({
   selector: 'app-timer',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class TimerComponent implements OnInit {
 
+  defaultMin: string = '05'
   minutes: string = '05';
   seconds: string = '00';
   hundredths: string = '00'
@@ -58,10 +60,19 @@ export class TimerComponent implements OnInit {
 
   resetTimer() {
     clearInterval(this.runTick)
-    this.minutes = '05';
+    this.minutes = this.defaultMin;
     this.seconds = '00';
     this.hundredths = '00'
     this.btnStatus = 'Start';
     this.running = false;
+  }
+
+  changeDefault(event) {
+    event.preventDefault()
+    let val = event.target[0].value
+    this.defaultMin = val < 10 ? '0' + val : val.toString()
+    this.minutes = this.defaultMin
+
+    this.resetTimer()
   }
 }

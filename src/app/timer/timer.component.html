@@ -4,11 +4,11 @@
   </h1>
   <button (click)="startStopTimer()">{{ btnStatus }}</button>
   <button (click)="resetTimer()">Reset</button>
-  <!-- <form>
+  <form (submit)="changeDefault($event)">
     <label>
       Set round length:
       <input type="number">
     </label>
     <input type="submit">
-  </form> -->
+  </form>
 </div>
