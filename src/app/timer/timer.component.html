@@ -1,1 +1,8 @@
-<p>timer works!</p>
+<div class="timer">
+  <h1 class="screen">
+    <span id="minutes">{{ minutes }}</span>:
+    <span id="seconds">{{ seconds }}</span>:
+    <span id="hundredths">{{ hundredths }}</span>
+  </h1>
+  <button (click)="startStopTimer()">{{ btnStatus }}</button>
+</div>
