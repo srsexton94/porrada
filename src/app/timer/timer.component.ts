@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class TimerComponent implements OnInit {
 
-  minutes: string = '00';
+  minutes: string = '05';
   seconds: string = '00';
-  hundredths: string = '00';
+  hundredths: string = '00'
   btnStatus: string = 'Start';
   running: boolean = false;
   runTick: any
@@ -21,23 +21,21 @@ export class TimerComponent implements OnInit {
   }
 
   startTimer() {
-    this.hundredths = '00'
-    this.seconds = '00'
-    this.minutes = '00'
     this.runTick = setInterval(() => {
       let minNum: number = parseInt(this.minutes)
       let secNum: number = parseInt(this.seconds)
       let hundNum: number = parseInt(this.hundredths)
 
-      if (hundNum === 99) {
-          hundNum = 0
-          secNum += 1
+      if (hundNum === 0) {
+        hundNum = 99
+        if (secNum === 0) {
+          minNum -= 1
+          secNum = 59
+        } else {
+          secNum -= 1
+        }
       } else {
-          hundNum += 1
-      }
-      if (secNum === 59) {
-          secNum = 0
-          minNum += 1
+        hundNum -= 1
       }
 
       this.minutes = minNum < 10 ? '0' + minNum : minNum.toString()
@@ -54,7 +52,7 @@ export class TimerComponent implements OnInit {
     } else {
       this.running = true
       this.startTimer()
-      this.btnStatus = 'Stop'
+      this.btnStatus = 'Pause'
     }
   }
 }
