@@ -13,9 +13,9 @@ export class TimerComponent implements OnInit {
   minutes: string = '05';
   seconds: string = '00';
   hundredths: string = '00'
-  btnStatus: string = 'Start';
   running: boolean = false;
   runTick: any
+  formerror: string = '';
 
   constructor() { }
 
@@ -50,28 +50,32 @@ export class TimerComponent implements OnInit {
     if (this.running) {
       this.running = false
       clearInterval(this.runTick)
-      this.btnStatus = 'Start'
     } else {
       this.running = true
       this.startTimer()
-      this.btnStatus = 'Pause'
     }
   }
 
   resetTimer() {
     clearInterval(this.runTick)
+    this.formerror = ''
     this.minutes = this.defaultMin;
     this.seconds = '00';
     this.hundredths = '00'
-    this.btnStatus = 'Start';
     this.running = false;
   }
 
   changeDefault(event) {
     event.preventDefault()
     let val = event.target[0].value
-    this.defaultMin = val < 10 ? '0' + val : val.toString()
-    this.minutes = this.defaultMin
+
+    if (val <= 10 && val >= 1) {
+      this.defaultMin = val < 10 ? '0' + val : val.toString()
+      this.minutes = this.defaultMin
+    } else {
+      this.formerror = 'Must be 1-10 minutes long'
+      console.error(this.formerror)
+    }
 
     this.resetTimer()
   }

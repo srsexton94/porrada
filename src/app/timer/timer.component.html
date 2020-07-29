@@ -2,13 +2,14 @@
   <h1 class="screen">
     {{ minutes }}:{{ seconds }}:{{ hundredths }}
   </h1>
-  <button (click)="startStopTimer()">{{ btnStatus }}</button>
+  <button (click)="startStopTimer()">{{ running ? 'Pause' : 'Start' }}</button>
   <button (click)="resetTimer()">Reset</button>
-  <form (submit)="changeDefault($event)">
-    <label>
-      Set round length:
-      <input type="number">
-    </label>
-    <input type="submit">
-  </form>
 </div>
+
+<form (submit)="changeDefault($event)">
+  <label>
+    Set match length:
+    <input class="num" type="number" placeholder="1-10 min">
+  </label>
+  <input type="submit">
+</form>

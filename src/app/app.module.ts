@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common'; // for directives
+import { FormsModule } from '@angular/forms'; // for two-way binding
 import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
@@ -22,7 +23,8 @@ import { MenuComponent } from './menu/menu.component';
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

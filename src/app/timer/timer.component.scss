@@ -1,9 +1,29 @@
 .timer {
   position: absolute;
   top: 35vh;
-  left: 20vw;
+  margin: auto;
   text-align: center;
-  border: 1px solid red;
-  width: 60vw;
-  // max-width: 20rem;
+  width: 10em;
+  left: 50%;
+  margin-left: -5em;
+  border-radius: 50%;
+
+  button {
+    padding: .35rem;
+    margin: .25rem;
+    font-weight: bold;
+  }
+}
+
+form {
+  position: absolute;
+  bottom: 1em;
+  width: 10em;
+  left: 50%;
+  margin-left: -5em;
+  text-align: center;
+
+  .num {
+    width: 40%;
+  }
 }
