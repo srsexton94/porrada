@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AdminHeaderComponent } from './admin-header/admin-header.component'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { ListItemComponent } from './list-item/list-item.component';
 import { TrainingTrackerComponent } from './training-tracker/training-tracker.component'
 import { TrainingLogComponent } from './training-log/training-log.component';
 import { TrainingComponent } from './training/training.component';
@@ -20,6 +21,7 @@ import { MenuComponent } from './menu/menu.component';
     AdminHeaderComponent,
     AppComponent,
     HomeComponent,
+    ListItemComponent,
     TrainingTrackerComponent,
     TrainingComponent,
     TrainingLogComponent,
