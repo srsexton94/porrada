@@ -1,0 +1,21 @@
+header {
+  height: 5vh;
+
+  h4 {
+    float: left;
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .btns {
+    float: right;
+
+    button {
+      border-radius: 5px;
+      border: 1px solid black;
+      height: 2em;
+      margin: 1px;
+      width: 4em;
+    }
+  }
+}

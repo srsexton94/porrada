@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms'; // for two-way binding
 import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
+import { AdminHeaderComponent } from './admin-header/admin-header.component'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TrainingTrackerComponent } from './training-tracker/training-tracker.component'
@@ -16,6 +17,7 @@ import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
+    AdminHeaderComponent,
     AppComponent,
     HomeComponent,
     TrainingTrackerComponent,
