@@ -1,17 +1,17 @@
 <header>
   <nav class="menu">
-    <a class="menu-toggle" href="#">
-      <span class="icon">Menu</span>
-    </a>
-    <ul class="menu-list">
+    <div class="menu-toggle" href="#" (click)="toggleMenu()">
+      <h4>Menu</h4>
+    </div>
+    <ul class="menu-list" *ngIf="menuOpen">
       <li class="menu-item">
-        <a href="#" routerLink="/">Home</a>
+        <a href="#" (click)="toggleMenu()" routerLink="/">Home</a>
       </li>
       <li class="menu-item">
-        <a href="#" routerLink="/training">Training</a>
+        <a href="#" (click)="toggleMenu()" routerLink="/training">Training</a>
       </li>
       <li class="menu-item">
-        <a href="#" routerLink="/timer">Timer</a>
+        <a href="#" (click)="toggleMenu()" routerLink="/timer">Timer</a>
       </li>
     </ul>
   </nav>

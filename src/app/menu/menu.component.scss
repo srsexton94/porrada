@@ -3,20 +3,35 @@
 $menu-height: 12vh;
 
 .menu {
-  background-color: $lvl-one;
+  background-color: $lvl-two;
   margin-top: $menu-height / 4;
   text-align: center;
   height: $menu-height;
   width: 100vw;
 
   .menu-toggle {
-    color: $main-text;
     display: inline-block;
     margin: $menu-height / 3 auto;
     width: 100%;
   }
 
   .menu-list {
-    display: none;
+    background-color: $lvl-one;
+    height: $menu-height * 3;
+    margin: auto;
+    position: relative;
+    z-index: 99;
+
+    .menu-item {
+      display: block;
+      width: 30vw;
+      margin: auto;
+      padding: $menu-height / 3;
+
+      a { 
+        color: $main-text;
+        text-decoration: none;
+      }
+    }
   }
 }
