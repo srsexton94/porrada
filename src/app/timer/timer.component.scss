@@ -1,3 +1,5 @@
+@use 'src/app/variables.scss' as *; 
+
 .timer {
   position: absolute;
   top: 35vh;
@@ -17,7 +19,7 @@
 
 form {
   position: absolute;
-  bottom: 1em;
+  bottom: 2em;
   width: 10em;
   left: 50%;
   margin-left: -5em;
@@ -25,5 +27,13 @@ form {
 
   .num {
     width: 40%;
+  }
+}
+
+.error {
+  border: 2px solid $error;
+  
+  &::placeholder {
+    color: $error;
   }
 }

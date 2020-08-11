@@ -1,124 +1,22 @@
-.mobile-menu {
-  display: block;
-  background: #2C2C2C;
-  line-height: 1.6em;
-  font-weight: 400;
-  width: 100vw;
+@use 'src/app/variables.scss' as *; 
+
+$menu-height: 12vh;
+
+.menu {
+  background-color: $lvl-one;
+  margin-top: $menu-height / 4;
   text-align: center;
-	position: relative;
-  margin: 0 auto;
+  height: $menu-height;
+  width: 100vw;
 
-  ul {
-    list-style-type: none;
-    margin: 0 auto;
-    padding-left: 0;
-    text-align: center;
-    width: 100vw;
-    position: absolute;
-    background: #2C2C2C;
-
-    li {
-      display:inline-block;
-
-      a {
-        display: block;
-        min-width: 140px;
-        text-align: center;
-        color: #EEF5FC;
-        text-transform:uppercase;
-        background: #2C2C2C;
-        text-decoration: none;
-        margin-left:-5px;
-        padding: 10px 0;  
-        transition: all 0.4s ease 0s;
-      }
-    }
-
-    li:hover {
-      color: #EEF5FC;
-
-      a {
-        color: #EEF5FC;
-        background-color:#454545;
-      }
-    }
-    
+  .menu-toggle {
+    color: $main-text;
+    display: inline-block;
+    margin: $menu-height / 3 auto;
+    width: 100%;
   }
 
-  .menu-bar {
-    text-decoration: none;
-    color: #EEF5FC;
-    background: #2C2C2C;
-    text-align: center;
-    padding: 10px 15px;
+  .menu-list {
     display: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    height: 2.5em;
-
-    span {
-      padding-left: 25px;
-    }
-  }
-
-  input[type=checkbox]{
-    display: none;
-
-    &:checked ~ #menu {
-      display: block;
-      position: absolute;
-      z-index: 99;
-      padding-bottom: 5vh;
-
-      li {
-        margin: 5vh auto;
-      }
-    } 
-  }
-}
-
-@media screen and (max-width : 800px) {
-  .mobile-menu {
-    .lines {
-      border-bottom: 15px double #EEF5FC; 
-      border-top: 5px solid #EEF5FC; 
-      content: '';
-      height: 5px; 
-      width: 20px;
-      padding-right: 15px;
-      float: right;
-    }
-
-    ul {
-      position: static;
-      display: none;
-
-      li {
-        margin-bottom: 1px;
-        width: 100%;
-      }
-    }
-
-    .menu-bar {
-      display: block;
-
-      .hamburg {
-        float: right;
-        right: 1em;
-
-        .ham-line {
-          border-radius: 35%;
-          background: #EEF5FC;
-          height: .25em;
-          margin: .35em;
-          width: 2.2em;
-        }
-      }
-    }
-  }
-
-  .intro {
-    width: 70vw;
-    left: 15vw;
   }
 }

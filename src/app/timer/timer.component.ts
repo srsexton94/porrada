@@ -15,7 +15,6 @@ export class TimerComponent implements OnInit {
   hundredths: string = '00'
   running: boolean = false;
   runTick: any
-  formerror: string = '';
 
   constructor() { }
 
@@ -58,7 +57,6 @@ export class TimerComponent implements OnInit {
 
   resetTimer() {
     clearInterval(this.runTick)
-    this.formerror = ''
     this.minutes = this.defaultMin;
     this.seconds = '00';
     this.hundredths = '00'
@@ -68,15 +66,14 @@ export class TimerComponent implements OnInit {
   changeDefault(event) {
     event.preventDefault()
     let val = event.target[0].value
+    event.target[0].classList.remove('error')
 
     if (val <= 10 && val >= 1) {
-      this.defaultMin = val < 10 ? '0' + val : val.toString()
+      this.defaultMin = val < 10 ? '0' + val : val.toString() 
       this.minutes = this.defaultMin
     } else {
-      this.formerror = 'Must be 1-10 minutes long'
-      console.error(this.formerror)
+      event.target[0].classList.add('error')
     }
-
-    this.resetTimer()
+    event.target.reset()
   }
 }
