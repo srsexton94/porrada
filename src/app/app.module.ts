@@ -6,11 +6,12 @@ import { FormsModule } from '@angular/forms'; // for two-way binding
 import { AppRoutingModule } from './app-routing.module';
 
 // COMPONENTS
-import { AdminHeaderComponent } from './admin-header/admin-header.component'
+import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ListItemComponent } from './list-item/list-item.component';
-import { TrainingTrackerComponent } from './training-tracker/training-tracker.component'
+import { SquareComponent } from './square/square.component';
+import { TrainingTrackerComponent } from './training-tracker/training-tracker.component';
 import { TrainingLogComponent } from './training-log/training-log.component';
 import { TrainingComponent } from './training/training.component';
 import { TimerComponent } from './timer/timer.component';
@@ -22,6 +23,7 @@ import { MenuComponent } from './menu/menu.component';
     AppComponent,
     HomeComponent,
     ListItemComponent,
+    SquareComponent,
     TrainingTrackerComponent,
     TrainingComponent,
     TrainingLogComponent,

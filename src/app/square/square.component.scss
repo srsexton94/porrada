@@ -1,0 +1,9 @@
+@use 'src/assets/variables.scss' as *; 
+
+.square {
+  background-color: $lvl-one;
+  border-radius: 3px;
+  margin: 1px;
+  height: .75em;
+  width: .75em;
+}
