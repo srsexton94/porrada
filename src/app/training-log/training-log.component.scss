@@ -1,6 +1,35 @@
+@use 'src/assets/variables.scss' as *; 
+
 .log {
-  background-color: green;
-  height: 60vh;
   width: 100vw;
-  overflow-y: scroll;
+
+  ul {
+    list-style: none;
+    height: 50vh;
+    width: 100%;
+    overflow-y: scroll;
+
+    .item {
+      background-color: $lvl-two;
+      border-radius: 5px;
+      margin: 2vh auto;
+      padding: 1em;
+      width: 75vw;
+  
+      .title, .date {
+        display: inline-block;
+        width: 49%;
+      }
+
+      .date {
+        text-align: right;
+      }
+
+      .descrip {
+        font-size: 12px;
+        max-height: 2em;
+        overflow-y: hidden;
+      }
+    }
+  }
 }
