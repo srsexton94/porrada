@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 // COMPONENTS
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { TrainingTrackerComponent } from './training-tracker/training-tracker.component'
+import { TrainingLogComponent } from './training-log/training-log.component';
 import { TrainingComponent } from './training/training.component';
 import { TimerComponent } from './timer/timer.component';
 import { MenuComponent } from './menu/menu.component';
@@ -16,7 +18,9 @@ import { MenuComponent } from './menu/menu.component';
   declarations: [
     AppComponent,
     HomeComponent,
+    TrainingTrackerComponent,
     TrainingComponent,
+    TrainingLogComponent,
     TimerComponent,
     MenuComponent
   ],

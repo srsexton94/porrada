@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-training',
-  templateUrl: './training.component.html',
-  styleUrls: ['./training.component.scss']
+  styleUrls: ['./training.component.scss'],
+  template:  `
+    <training-tracker></training-tracker>
+    <training-log></training-log>
+  `
 })
 export class TrainingComponent implements OnInit {
 
